@@ -1,33 +1,35 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
 projects = [
     {
         "id": 1,
         "title": "Nilam Portfolio Platform",
         "desc": "End-to-end full-stack application demonstrating React frontend, Python backend, API integration, and cloud deployment",
-        "details": """
-• Frontend: React (state management, event handling, dynamic rendering)
-• Backend: Python FastAPI service deployed on cloud
-• API: REST endpoints for project data and system health checks
-• Integration: Frontend communicates with backend via async API calls
-• DevOps: Git-based version control and deployment pipeline (Render)
-• Architecture: Decoupled frontend/backend (API-first design)
-• Monitoring: Live backend status + response time tracking
-• UX: Interactive UI with filtering, search, and expandable components
-• CI/CD: Automated deployment via Git push to production
-"""
+        "details": "React frontend, FastAPI backend, API integration, deployed on Render"
     },
     {
         "id": 2,
         "title": "WorkforceConnect",
-        "desc": "Full-stack application integrating React UI with Python (FastAPI) backend APIs"
+        "desc": "React + FastAPI integration example"
     },
     {
         "id": 3,
         "title": "Badge Swipes",
-        "desc": "End-to-end data pipeline example showing API-driven data processing"
+        "desc": "Data pipeline + API processing example"
     },
     {
         "id": 4,
         "title": "Orbit Platform",
-        "desc": "Enterprise-scale system integrating multiple data sources and APIs"
+        "desc": "Enterprise data integration system"
     }
 ]
+
+@app.get("/")
+def home():
+    return {"message": "Backend running"}
+
+@app.get("/projects")
+def get_projects():
+    return projects
