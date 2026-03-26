@@ -6,7 +6,7 @@ projects = [
     {
         "id": 1,
         "title": "Nilam Portfolio Platform",
-        "desc": "End-to-end full-stack application demonstrating React frontend, Python backend, API integration, and cloud deployment",
+        "desc": "End-to-end full-stack application demonstrating React frontend, Python backend, API integration, and cloud deployment"
     },
     {
         "id": 2,
